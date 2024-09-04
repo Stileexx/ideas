@@ -11,6 +11,28 @@ class DashboardController extends Controller
 
     // some logic
     {
-        return view('welcome');
+        $users = [
+            [
+                'name' => 'Alex',
+                'age' => 30,
+
+            ],
+            [
+                'name' => 'Dan',
+                'age' => 25,
+            ],
+            [
+                'name' => 'John',
+                'age' => 17,
+            ]
+        ];
+
+
+        return view(
+            'dashboard',
+            [
+                'users' => $users
+            ]
+        );
     }
 }
