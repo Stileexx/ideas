@@ -17,7 +17,6 @@ class DashboardController extends Controller
         $idea->save();
 
         // dump(Idea::all());
-
         return view('dashboard', [
             'ideas' => Idea::orderBy('created_at', 'DESC')->get()
         ]);
